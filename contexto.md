@@ -22,11 +22,11 @@ Página explicativa do contexto, em concordância com a apresentação produzida
 
 ### Resumo (PT)
 
-[texto em português, máx. 500 palavras]
+Coloque aqui o resumo do projeto em português (máximo 500 palavras).
 
 ### Abstract (EN)
 
-[english version, max 500 words]
+Place here the abstract in English (max 500 words).
 
 ## 2. Referências Coletivas
 
