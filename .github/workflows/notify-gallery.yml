@@ -1,0 +1,27 @@
+name: Notify gallery rebuild
+
+# Pings the main course site repo on every push to main, so the public
+# gallery refreshes with this group's latest content.
+#
+# Requires the org secret MAIN_REPO_DISPATCH_TOKEN to be available to
+# Classroom assignments (configured once at the GitHub Classroom org level).
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch rebuild to course site
+        env:
+          GH_TOKEN: ${{ secrets.MAIN_REPO_DISPATCH_TOKEN }}
+        run: |
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            /repos/steam228/classes/dispatches \
+            -f event_type=group-update \
+            -f "client_payload[group_repo]=${{ github.repository }}" \
+            -f "client_payload[commit]=${{ github.sha }}"
