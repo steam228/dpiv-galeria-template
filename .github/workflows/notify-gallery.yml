@@ -18,6 +18,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.MAIN_REPO_DISPATCH_TOKEN }}
         run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::notice::MAIN_REPO_DISPATCH_TOKEN not configured for this repo — skipping dispatch. (Expected on the template repo or any fork outside the classroom org.)"
+            exit 0
+          fi
           gh api \
             --method POST \
             -H "Accept: application/vnd.github+json" \
