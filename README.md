@@ -140,18 +140,27 @@ A pasta `_modelo/` original pode ser deixada como referência ou apagada — nã
 
 Estas imagens **funcionam sempre**, em qualquer ficheiro `.md`.
 
-### Imagem de capa (hero) — atenção ao caminho
+### Imagem de capa (hero) — convenção
 
-A imagem de capa é definida no frontmatter (`hero_image:`). Há **uma regra**:
+**Regra única**: a imagem usada como hero (e thumbnail na galeria) deve chamar-se sempre `hero.jpg` (ou `hero.png`), guardada em `attachments/` ao lado do ficheiro `.md`. Cada nível tem o seu próprio `hero.jpg`:
 
-| Tipo de ficheiro                                     | Como escrever `hero_image:` |
-| ---------------------------------------------------- | --------------------------- |
-| `index.md` (qualquer pasta)                          | `attachments/hero.jpg`      |
-| Outros ficheiros (ex.: `contexto.md`, `processo.md`) | `../attachments/hero.jpg`   |
+- `attachments/hero.jpg` ao lado de `index.md` e `contexto.md` → hero do **grupo**
+- `produtos/<numero>-<nome>/attachments/hero.jpg` ao lado do `index.md` e `processo.md` desse produto → hero do **produto**
 
-Os ficheiros do template já estão pré-configurados corretamente. **Se mudarem o nome do ficheiro de imagem**, mantenham o prefixo `../` quando aplicável.
+Outras imagens no corpo (`![](attachments/foto.jpg)`) podem ter qualquer nome — só o hero é que tem nome obrigatório.
 
-> *Porquê?* Os caminhos no frontmatter não são reescritos pelo gerador do site, ao contrário das imagens no corpo do texto. Os ficheiros não-`index.md` ficam publicados num URL com um nível extra (`processo/` em vez de `processo.html`), e por isso precisam de `../` para chegar à pasta `attachments` ao lado.
+#### Caminho no frontmatter (`hero_image:`)
+
+Há **uma regra de prefixo**:
+
+| Tipo de ficheiro                                     | `hero_image:`             |
+| ---------------------------------------------------- | ------------------------- |
+| `index.md` (qualquer pasta)                          | `attachments/hero.jpg`    |
+| Outros ficheiros (ex.: `contexto.md`, `processo.md`) | `../attachments/hero.jpg` |
+
+O template já está pré-configurado corretamente — basta substituir o ficheiro `hero.jpg` pela vossa imagem real, mantendo o nome.
+
+> *Porquê o `../`?* Os caminhos no frontmatter não são reescritos pelo gerador do site, ao contrário das imagens no corpo do texto. Os ficheiros não-`index.md` são publicados num URL com um nível extra (`processo/` em vez de `processo.html`), e por isso precisam de `../` para chegar à pasta `attachments` ao lado.
 
 ### Vídeos e modelos 3D
 
