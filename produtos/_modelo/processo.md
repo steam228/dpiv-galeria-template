@@ -40,7 +40,7 @@ Testes CNC prévios, ensaios em escala, experiências de juntas/encaixes.
 
 Embed do Fusion (visualização do modelo paramétrico).
 
-<!-- a360.co/... ou ![](modelo.glb) -->
+https://a360.co/4nqYoPa
 
 ## 5. Outros Modelos
 
@@ -62,7 +62,7 @@ exploração de variantes.
 
 ![](attachments/placeholder.png)
 
-### 8.2. Objetos de referencia
+### 7.2. Objetos de referencia
 
 Inventário de precedentes, brinquedos análogos, referências históricas.
 

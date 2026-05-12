@@ -30,7 +30,7 @@ Place here the abstract in English (max 500 words).
 
 ## 2. Referências Coletivas
 
-### 2.1. Recolha de Objetos a Redesenhar
+### 2.1. Recolha de Objetos a Redesenhar/Remisturar
 
 Catálogo de objetos de partida que o grupo identificou para o redesenho. Para cada objeto: imagem, origem, motivo da escolha.
 
